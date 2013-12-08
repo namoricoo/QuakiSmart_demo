@@ -14,3 +14,9 @@
 * Zerro rubocop errors
 
 4) Deploy to heroku
+
+* Deployment failed
+
+5) Create usgs controller with index view.
+
+* message in index view "Hello from the index page."
