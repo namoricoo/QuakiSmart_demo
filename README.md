@@ -20,3 +20,5 @@
 5) Create usgs controller with index view.
 
 * message in index view "Hello from the index page."
+
+6) Deploy to heroku is now working with default message
