@@ -12,3 +12,5 @@
 * 39 rubocop errors with default rspec / rails / postgres installation
 * remove all 39 errors
 * Zerro rubocop errors
+
+4) Deploy to heroku
