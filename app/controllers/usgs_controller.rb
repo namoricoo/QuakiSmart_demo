@@ -1,3 +1,4 @@
+# UsgsController
 class UsgsController < ApplicationController
   def index
   end

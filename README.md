@@ -22,3 +22,5 @@
 * message in index view "Hello from the index page."
 
 6) Deploy to heroku is now working with default message
+
+7) Resolve rubocop errors from adding the usgs controller with the index view
