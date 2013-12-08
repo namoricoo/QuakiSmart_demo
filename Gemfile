@@ -4,6 +4,30 @@ ruby "2.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
+gem 'rspec-rails'
+
+gem 'guard-rspec'
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  # Uncomment this line on OS X.
+  gem 'growl'
+  gem 'guard-rspec'
+  #guard spec will automatically run the test for you
+     
+  # Uncomment these lines on Linux.
+  # gem 'libnotify', '0.8.0'
+
+  # Uncomment these lines on Windows.
+  # gem 'rb-notifu', '0.0.4'
+  # gem 'win32console', '1.3.2'
+  # gem 'wdm', '0.1.0'
+end
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
