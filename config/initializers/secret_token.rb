@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-QuakismartDemo::Application.config.secret_key_base = 'c9b8a186d968590574d8731665371b4d89bd778d0704940660588cb993e6359fb6a6a09e84d05b5c00fa2b3779e17ec5facca38fb22009aee9816df3fa0f935d'
+value = 'c9b8a186d968590574d8731665371b4d89bd778d0704940660588cb993e6359fb6a'
+QuakismartDemo::Application.config.secret_key_base = value

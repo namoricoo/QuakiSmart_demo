@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: quakismart_demo_development
+  database: rails_heroku_db_development
   pool: 5
-  username: quakismart_demo
+  #username: quakismart_demo
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,15 +46,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: quakismart_demo_test
-  pool: 5
-  username: quakismart_demo
+  database: rails_heroku_db_test
+  pool: 5 
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: quakismart_demo_production
-  pool: 5
-  username: quakismart_demo
+  database: rails_heroku_db_production
+  pool: 5 
   password:
