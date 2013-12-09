@@ -26,3 +26,5 @@
 7) Resolve rubocop errors from adding the usgs controller with the index view
 
 8)Zurb Foundation Integration
+
+* zerro rubocop errors
