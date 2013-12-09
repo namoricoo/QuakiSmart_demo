@@ -1,3 +1,2911 @@
 // Place all the styles related to the usgs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+div#quaki-logo {
+   position: absolute;
+    top: 0px;
+    left: 0px;
+    // will make logo show up in front of the menu
+    z-index: 500;  
+}
+
+
+#quaki-main
+{
+   background: #FFFFFF;
+   margin:0 auto;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   position: relative;
+   width: 100%;
+   min-height: 100%;
+   left: 0;
+   top: 0;
+   cursor:default;
+   overflow:hidden;
+}
+
+
+table, ul.quaki-hmenu
+{
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
+{
+   margin: 0;
+   padding: 0;
+}
+
+/* Reset buttons border. It's important for input and button tags. 
+ * border-collapse should be separate for shadow in IE. 
+ */
+.quaki-button
+{
+   border: 0;
+   border-collapse: separate;
+   -webkit-background-origin: border !important;
+   -moz-background-origin: border !important;
+   background-origin: border-box !important;
+   background: #A1ADBA;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border-width: 0;
+   padding:0 21px;
+   margin:0 auto;
+   height:24px;
+}
+
+.quaki-postcontent,
+.quaki-postheadericons,
+.quaki-postfootericons,
+.quaki-blockcontent,
+ul.quaki-vmenu a 
+{
+   text-align: left;
+}
+
+.quaki-postcontent,
+.quaki-postcontent li,
+.quaki-postcontent table,
+.quaki-postcontent a,
+.quaki-postcontent a:link,
+.quaki-postcontent a:visited,
+.quaki-postcontent a.visited,
+.quaki-postcontent a:hover,
+.quaki-postcontent a.hovered
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+
+.quaki-postcontent p
+{
+   margin: 13px 0;
+}
+
+.quaki-postcontent h1, .quaki-postcontent h1 a, .quaki-postcontent h1 a:link, .quaki-postcontent h1 a:visited, .quaki-postcontent h1 a:hover,
+.quaki-postcontent h2, .quaki-postcontent h2 a, .quaki-postcontent h2 a:link, .quaki-postcontent h2 a:visited, .quaki-postcontent h2 a:hover,
+.quaki-postcontent h3, .quaki-postcontent h3 a, .quaki-postcontent h3 a:link, .quaki-postcontent h3 a:visited, .quaki-postcontent h3 a:hover,
+.quaki-postcontent h4, .quaki-postcontent h4 a, .quaki-postcontent h4 a:link, .quaki-postcontent h4 a:visited, .quaki-postcontent h4 a:hover,
+.quaki-postcontent h5, .quaki-postcontent h5 a, .quaki-postcontent h5 a:link, .quaki-postcontent h5 a:visited, .quaki-postcontent h5 a:hover,
+.quaki-postcontent h6, .quaki-postcontent h6 a, .quaki-postcontent h6 a:link, .quaki-postcontent h6 a:visited, .quaki-postcontent h6 a:hover,
+.quaki-blockheader .t, .quaki-blockheader .t a, .quaki-blockheader .t a:link, .quaki-blockheader .t a:visited, .quaki-blockheader .t a:hover,
+.quaki-vmenublockheader .t, .quaki-vmenublockheader .t a, .quaki-vmenublockheader .t a:link, .quaki-vmenublockheader .t a:visited, .quaki-vmenublockheader .t a:hover,
+.quaki-headline, .quaki-headline a, .quaki-headline a:link, .quaki-headline a:visited, .quaki-headline a:hover,
+.quaki-slogan, .quaki-slogan a, .quaki-slogan a:link, .quaki-slogan a:visited, .quaki-slogan a:hover,
+.quaki-postheader, .quaki-postheader a, .quaki-postheader a:link, .quaki-postheader a:visited, .quaki-postheader a:hover
+{
+   font-size: 22px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 120%;
+}
+
+.quaki-postcontent a, .quaki-postcontent a:link
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #FA5705;
+}
+
+.quaki-postcontent a:visited, .quaki-postcontent a.visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #9C9C9C;
+}
+
+.quaki-postcontent  a:hover, .quaki-postcontent a.hover
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: underline;
+   color: #FB7C3C;
+}
+
+.quaki-postcontent h1
+{
+   color: #6C7F93;
+   margin: 10px 0 0;
+   font-size: 26px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent h1
+{
+   margin: 10px 0 0;
+   font-size: 26px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h1 a, .quaki-postcontent h1 a:link, .quaki-postcontent h1 a:hover, .quaki-postcontent h1 a:visited, .quaki-blockcontent h1 a, .quaki-blockcontent h1 a:link, .quaki-blockcontent h1 a:hover, .quaki-blockcontent h1 a:visited 
+{
+   font-size: 26px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h2
+{
+   color: #8D9CAA;
+   margin: 10px 0 0;
+   font-size: 22px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent h2
+{
+   margin: 10px 0 0;
+   font-size: 22px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h2 a, .quaki-postcontent h2 a:link, .quaki-postcontent h2 a:hover, .quaki-postcontent h2 a:visited, .quaki-blockcontent h2 a, .quaki-blockcontent h2 a:link, .quaki-blockcontent h2 a:hover, .quaki-blockcontent h2 a:visited 
+{
+   font-size: 22px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h3
+{
+   color: #FB7C3C;
+   margin: 10px 0 0;
+   font-size: 20px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent h3
+{
+   margin: 10px 0 0;
+   font-size: 20px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h3 a, .quaki-postcontent h3 a:link, .quaki-postcontent h3 a:hover, .quaki-postcontent h3 a:visited, .quaki-blockcontent h3 a, .quaki-blockcontent h3 a:link, .quaki-blockcontent h3 a:hover, .quaki-blockcontent h3 a:visited 
+{
+   font-size: 20px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h4
+{
+   color: #696969;
+   margin: 10px 0 0;
+   font-size: 18px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent h4
+{
+   margin: 10px 0 0;
+   font-size: 18px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h4 a, .quaki-postcontent h4 a:link, .quaki-postcontent h4 a:hover, .quaki-postcontent h4 a:visited, .quaki-blockcontent h4 a, .quaki-blockcontent h4 a:link, .quaki-blockcontent h4 a:hover, .quaki-blockcontent h4 a:visited 
+{
+   font-size: 18px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h5
+{
+   color: #696969;
+   margin: 10px 0 0;
+   font-size: 15px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent h5
+{
+   margin: 10px 0 0;
+   font-size: 15px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h5 a, .quaki-postcontent h5 a:link, .quaki-postcontent h5 a:hover, .quaki-postcontent h5 a:visited, .quaki-blockcontent h5 a, .quaki-blockcontent h5 a:link, .quaki-blockcontent h5 a:hover, .quaki-blockcontent h5 a:visited 
+{
+   font-size: 15px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h6
+{
+   color: #B8B8B8;
+   margin: 10px 0 0;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent h6
+{
+   margin: 10px 0 0;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-postcontent h6 a, .quaki-postcontent h6 a:link, .quaki-postcontent h6 a:hover, .quaki-postcontent h6 a:visited, .quaki-blockcontent h6 a, .quaki-blockcontent h6 a:link, .quaki-blockcontent h6 a:hover, .quaki-blockcontent h6 a:visited 
+{
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+header, footer, article, nav, #quaki-hmenu-bg, .quaki-sheet, .quaki-hmenu a, .quaki-vmenu a, .quaki-slidenavigator > a, .quaki-checkbox:before, .quaki-radiobutton:before
+{
+   -webkit-background-origin: border !important;
+   -moz-background-origin: border !important;
+   background-origin: border-box !important;
+}
+
+header, footer, article, nav, #quaki-hmenu-bg, .quaki-sheet, .quaki-slidenavigator > a, .quaki-checkbox:before, .quaki-radiobutton:before
+{
+   display: block;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+ul
+{
+   list-style-type: none;
+}
+
+ol
+{
+   list-style-position: inside;
+}
+
+html, body
+{
+   height: 100%;
+}
+
+body
+{
+   padding: 0;
+   margin:0;
+   min-width: 700px;
+   color: #111417;
+}
+
+.quaki-header:before, #quaki-header-bg:before, .quaki-layout-cell:before, .quaki-layout-wrapper:before, .quaki-footer:before, .quaki-nav:before, #quaki-hmenu-bg:before, .quaki-sheet:before
+{
+   width: 100%;
+   content: " ";
+   display: table;
+}
+.quaki-header:after, #quaki-header-bg:after, .quaki-layout-cell:after, .quaki-layout-wrapper:after, .quaki-footer:after, .quaki-nav:after, #quaki-hmenu-bg:after, .quaki-sheet:after,
+.cleared, .clearfix:after {
+   clear: both;
+   font: 0/0 serif;
+   display: block;
+   content: " ";
+}
+
+form
+{
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+table.position
+{
+   position: relative;
+   width: 100%;
+   table-layout: fixed;
+}
+
+li h1, .quaki-postcontent li h1, .quaki-blockcontent li h1 
+{
+   margin:1px;
+} 
+li h2, .quaki-postcontent li h2, .quaki-blockcontent li h2 
+{
+   margin:1px;
+} 
+li h3, .quaki-postcontent li h3, .quaki-blockcontent li h3 
+{
+   margin:1px;
+} 
+li h4, .quaki-postcontent li h4, .quaki-blockcontent li h4 
+{
+   margin:1px;
+} 
+li h5, .quaki-postcontent li h5, .quaki-blockcontent li h5 
+{
+   margin:1px;
+} 
+li h6, .quaki-postcontent li h6, .quaki-blockcontent li h6 
+{
+   margin:1px;
+} 
+li p, .quaki-postcontent li p, .quaki-blockcontent li p 
+{
+   margin:1px;
+}
+
+
+.quaki-shapes
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: 0;
+}
+
+.quaki-slider-inner {
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+}
+
+.quaki-slidenavigator > a {
+   display: inline-block;
+   vertical-align: middle;
+   outline-style: none;
+   font-size: 1px;
+}
+
+.quaki-slidenavigator > a:last-child {
+   margin-right: 0 !important;
+}
+
+.quaki-headline
+{
+  display: inline-block;
+  position: absolute;
+  min-width: 50px;
+  top: 29px;
+  left: 1.23%;
+  line-height: 100%;
+  margin-left: -2px !important;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  z-index: 102;
+}
+
+.quaki-headline, 
+.quaki-headline a, 
+.quaki-headline a:link, 
+.quaki-headline a:visited, 
+.quaki-headline a:hover
+{
+font-size: 36px;
+font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+font-weight: normal;
+font-style: normal;
+text-decoration: none;
+text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
+  color: #F55505 !important;
+  white-space: nowrap;
+}
+.quaki-object227400126 h1, 
+.quaki-object227400126 h2, 
+.quaki-object227400126 h3, 
+.quaki-object227400126 h4, 
+.quaki-object227400126 h5, 
+.quaki-object227400126 h6, 
+.quaki-object227400126 p, 
+.quaki-object227400126 a, 
+.quaki-object227400126 ul, 
+.quaki-object227400126 ol, 
+.quaki-object227400126 li
+{
+  line-height: 100%;
+}
+
+.quaki-object227400126
+{  
+  position: absolute;
+  top: 39px;
+  left: 97.5%;
+  margin-left: -195px !important;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+      z-index: 101;
+  width: 200px;
+  height: 26px;
+}
+
+
+
+
+
+
+
+.quaki-nav
+{
+   background: #F2F2F2;
+   border-bottom:1px dotted #B5B5B5;
+   margin:0 auto;
+   position: relative;
+   z-index: 499;
+}
+
+ul.quaki-hmenu a, ul.quaki-hmenu a:link, ul.quaki-hmenu a:visited, ul.quaki-hmenu a:hover 
+{
+   outline: none;
+   position: relative;
+   z-index: 11;
+}
+
+ul.quaki-hmenu, ul.quaki-hmenu ul
+{
+   display: block;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   list-style-type: none;
+}
+
+ul.quaki-hmenu li
+{
+   position: relative;
+   z-index: 5;
+   display: block;
+   float: left;
+   background: none;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+ul.quaki-hmenu li:hover
+{
+   z-index: 10000;
+   white-space: normal;
+}
+
+ul.quaki-hmenu:after, ul.quaki-hmenu ul:after
+{
+   content: ".";
+   height: 0;
+   display: block;
+   visibility: hidden;
+   overflow: hidden;
+   clear: both;
+}
+
+ul.quaki-hmenu, ul.quaki-hmenu ul 
+{
+   min-height: 0;
+}
+
+ul.quaki-hmenu 
+{
+   display: inline-block;
+   vertical-align: bottom;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.quaki-nav-inner:before 
+{
+   content:' ';
+}
+
+.quaki-nav-inner{
+   text-align: right;
+   margin:0 auto;
+}
+
+.desktop  .quaki-nav-inner{
+   min-width: 700px;
+   max-width: 1920px;
+   width: 100%;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop .quaki-nav
+{
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.quaki-hmenu-extra1
+{
+   position: relative;
+   display: block;
+   float: left;
+   width: auto;
+   height: auto;
+   background-position: center;
+}
+
+.quaki-hmenu-extra2
+{
+   position: relative;
+   display: block;
+   float: right;
+   width: auto;
+   height: auto;
+   background-position: center;
+}
+
+.quaki-hmenu
+{
+   float: right;
+}
+
+.quaki-menuitemcontainer
+{
+   margin:0 auto;
+}
+ul.quaki-hmenu>li {
+   margin-left: 11px;
+}
+ul.quaki-hmenu>li:first-child {
+   margin-left: 5px;
+}
+ul.quaki-hmenu>li:last-child, ul.quaki-hmenu>li.last-child {
+   margin-right: 5px;
+}
+
+ul.quaki-hmenu>li>a
+{
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   padding:0 17px;
+   margin:0 auto;
+   position: relative;
+   display: block;
+   height: 34px;
+   cursor: pointer;
+   text-decoration: none;
+   color: #6A7D90;
+   line-height: 34px;
+   text-align: center;
+}
+
+.quaki-hmenu a, 
+.quaki-hmenu a:link, 
+.quaki-hmenu a:visited, 
+.quaki-hmenu a.active, 
+.quaki-hmenu a:hover
+{
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   text-transform: uppercase;
+   text-align: left;
+}
+
+ul.quaki-hmenu>li>a.active
+{
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   padding:0 17px;
+   margin:0 auto;
+   color: #F05305;
+   text-decoration: none;
+}
+
+ul.quaki-hmenu>li>a:visited, 
+ul.quaki-hmenu>li>a:hover, 
+ul.quaki-hmenu>li:hover>a {
+   text-decoration: none;
+}
+
+ul.quaki-hmenu>li>a:hover, .desktop ul.quaki-hmenu>li:hover>a
+{
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   padding:0 17px;
+   margin:0 auto;
+}
+ul.quaki-hmenu>li>a:hover, 
+.desktop ul.quaki-hmenu>li:hover>a {
+   color: #F05305;
+   text-decoration: none;
+}
+
+ul.quaki-hmenu>li:before
+{
+   position:absolute;
+   display: block;
+   content:' ';
+   top:0;
+   left:  -11px;
+   width:11px;
+   height: 34px;
+   background: url('images/menuseparator.png') center center no-repeat;
+}
+ul.quaki-hmenu>li:first-child:before{
+   display:none;
+}
+
+ul.quaki-hmenu li li a
+{
+   background: #000000;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   padding:0 10px;
+   margin:0 auto;
+}
+ul.quaki-hmenu li li 
+{
+   float: none;
+   width: auto;
+   margin-top: 2px;
+   margin-bottom: 2px;
+}
+
+.desktop ul.quaki-hmenu li li ul>li:first-child 
+{
+   margin-top: 0;
+}
+
+ul.quaki-hmenu li li ul>li:last-child 
+{
+   margin-bottom: 0;
+}
+
+.quaki-hmenu ul a
+{
+   display: block;
+   white-space: nowrap;
+   height: 24px;
+   min-width: 7em;
+   border: 0 solid transparent;
+   text-align: left;
+   line-height: 24px;
+   color: #FFFFFF;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   margin:0;
+}
+
+.quaki-hmenu ul a:link, 
+.quaki-hmenu ul a:visited, 
+.quaki-hmenu ul a.active, 
+.quaki-hmenu ul a:hover
+{
+   text-align: left;
+   line-height: 24px;
+   color: #FFFFFF;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   margin:0;
+}
+
+ul.quaki-hmenu li li:after
+{
+   display: block;
+   position: absolute;
+   content: ' ';
+   height: 0;
+   top: -1px;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   border-bottom: 1px dotted #D1D1D1;
+}
+
+.desktop ul.quaki-hmenu li li:first-child:before, 
+.desktop ul.quaki-hmenu li li:first-child:after 
+{
+   display: none;
+} 
+
+ul.quaki-hmenu ul li a:hover, .desktop ul.quaki-hmenu ul li:hover>a
+{
+   background: #FFFFFF;
+   background: transparent;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   margin:0 auto;
+}
+.quaki-hmenu ul a:hover
+{
+   text-decoration: none;
+}
+
+.quaki-hmenu ul li a:hover
+{
+   color: #F05305;
+}
+
+.desktop .quaki-hmenu ul li:hover>a
+{
+   color: #F05305;
+}
+
+ul.quaki-hmenu ul:before
+{
+   background: #F2F2F2;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border:1px dotted rgba(217, 217, 217, 0.9);
+   margin:0 auto;
+   display: block;
+   position: absolute;
+   content: ' ';
+   z-index: 1;
+}
+.desktop ul.quaki-hmenu li:hover>ul {
+   visibility: visible;
+   top: 100%;
+}
+.desktop ul.quaki-hmenu li li:hover>ul {
+   top: 0;
+   left: 100%;
+}
+
+ul.quaki-hmenu ul
+{
+   visibility: hidden;
+   position: absolute;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   background-image: url('images/spacer.gif');
+}
+
+.desktop ul.quaki-hmenu>li>ul
+{
+   padding: 16px 36px 36px 36px;
+   margin: -10px 0 0 -30px;
+}
+
+.desktop ul.quaki-hmenu ul ul
+{
+   padding: 36px 36px 36px 18px;
+   margin: -36px 0 0 -5px;
+}
+
+.desktop ul.quaki-hmenu ul.quaki-hmenu-left-to-right 
+{
+   right: auto;
+   left: 0;
+   margin: -10px 0 0 -30px;
+}
+
+.desktop ul.quaki-hmenu ul.quaki-hmenu-right-to-left 
+{
+   left: auto;
+   right: 0;
+   margin: -10px -30px 0 0;
+}
+
+.desktop ul.quaki-hmenu li li:hover>ul.quaki-hmenu-left-to-right {
+   right: auto;
+   left: 100%;
+}
+.desktop ul.quaki-hmenu li li:hover>ul.quaki-hmenu-right-to-left {
+   left: auto;
+   right: 100%;
+}
+
+.desktop ul.quaki-hmenu ul ul.quaki-hmenu-left-to-right
+{
+   right: auto;
+   left: 0;
+   padding: 36px 36px 36px 18px;
+   margin: -36px 0 0 -5px;
+}
+
+.desktop ul.quaki-hmenu ul ul.quaki-hmenu-right-to-left
+{
+   left: auto;
+   right: 0;
+   padding: 36px 18px 36px 36px;
+   margin: -36px -5px 0 0;
+}
+
+.desktop ul.quaki-hmenu li ul>li:first-child {
+   margin-top: 0;
+}
+.desktop ul.quaki-hmenu li ul>li:last-child {
+   margin-bottom: 0;
+}
+
+.desktop ul.quaki-hmenu ul ul:before
+{
+   border-radius: 3px;
+   top: 30px;
+   bottom: 30px;
+   right: 30px;
+   left: 12px;
+}
+
+.desktop ul.quaki-hmenu>li>ul:before
+{
+   top: 10px;
+   right: 30px;
+   bottom: 30px;
+   left: 30px;
+}
+
+.desktop ul.quaki-hmenu>li>ul.quaki-hmenu-left-to-right:before {
+   right: 30px;
+   left: 30px;
+}
+.desktop ul.quaki-hmenu>li>ul.quaki-hmenu-right-to-left:before {
+   right: 30px;
+   left: 30px;
+}
+.desktop ul.quaki-hmenu ul ul.quaki-hmenu-left-to-right:before {
+   right: 30px;
+   left: 12px;
+}
+.desktop ul.quaki-hmenu ul ul.quaki-hmenu-right-to-left:before {
+   right: 12px;
+   left: 30px;
+}
+
+.desktop ul.quaki-hmenu>li.ext>a
+{
+   white-space: nowrap;
+}
+
+.desktop ul.quaki-hmenu>li.ext>a:hover,
+.desktop ul.quaki-hmenu>li.ext:hover>a,
+.desktop ul.quaki-hmenu>li.ext:hover>a.active  
+{
+   background: none;
+   /* default padding + border size */
+  padding: 0 17px 0 17px;
+   /* margin for shadow */
+  margin: -0 -0 0 -0;
+   overflow: hidden;
+   position: relative;
+   border: none;
+   border-radius: 0;
+   box-shadow: none;
+   color: #F05305;
+}
+
+.desktop ul.quaki-hmenu>li.ext>a:hover:before,
+.desktop ul.quaki-hmenu>li.ext:hover>a:before,
+.desktop ul.quaki-hmenu>li.ext:hover>a.active:before  
+{
+   position: absolute;
+   content: ' ';
+   /* top, right, left - for shadow */
+  top: 0;
+   right: 0;
+   left: 0;
+   /* border + shadow */
+  bottom: -1px;
+   background-color: #F2F2F2;
+   border: 1px Dotted rgba(217, 217, 217, 0.9);
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+   z-index: -1;
+}
+
+.desktop ul.quaki-hmenu>li.ext:hover>ul 
+{
+   padding-top: 5px;
+   /* menu bar padding */
+  margin-top: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext:hover>ul:before 
+{
+   /* border + shadow */
+  top: -1px;
+   clip: rect(6px, auto, auto, auto);
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+ul.quaki-hmenu>li.ext>.ext-r,
+ul.quaki-hmenu>li.ext>.ext-l,
+ul.quaki-hmenu>li.ext>.ext-m,
+ul.quaki-hmenu>li.ext>.ext-off
+{
+   display: none;
+   z-index: 12;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.desktop ul.quaki-hmenu>li.ext>ul 
+{
+   z-index: 13;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-r:hover>.ext-r,
+.desktop ul.quaki-hmenu>li.ext.ext-l:hover>.ext-l
+{
+   position: absolute;
+   display: block;
+   overflow: hidden;
+   /* size of radius 
+   * if size if 0 we should now generate script 
+   * that adds ext-r and ext-m divs
+   */
+  height: 6px;
+   top: 100%;
+   padding-top: 1px;
+   margin-top: -1px;
+/* border width + shadow */}
+
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-r:before,
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-l:before
+{
+   position: absolute;
+   content: ' ';
+   top: 0;
+   /* border + shadow */
+  bottom: -1px;
+   background-color: #F2F2F2;
+   border: 1px Dotted rgba(217, 217, 217, 0.9);
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-r:hover>.ext-r
+{
+   left: 100%;
+   right: auto;
+   padding-left: 0;
+   margin-left: 0;
+   padding-right: 1px;
+   margin-right: -1px;
+/* only shadow */}
+
+.desktop ul.quaki-hmenu>li.ext.ext-r:hover>.ext-r:before
+{
+   right: 0;
+   left: -1px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 3px;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-l:hover>.ext-l
+{
+   right: 100%;
+   left: auto;
+   padding-right: 0;
+   margin-right: 0;
+   padding-left: 1px;
+   margin-left: -1px;
+/* only shadow */}
+
+.desktop ul.quaki-hmenu>li.ext.ext-l:hover>.ext-l:before
+{
+   right: -1px;
+   left: 0;
+   border-top-right-radius: 0;
+   border-top-left-radius: 3px;
+}
+
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-m, 
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-off 
+{
+   position: absolute;
+   display: block;
+   overflow: hidden;
+   height: 5px;
+   top: 100%;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-r:hover>.ext-m 
+{
+   /* shadow offset */
+  left: -0;
+   right: 0;
+   /* shadow offset */
+  padding-right: 0;
+   padding-left: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-off 
+{
+   /* shadow offset */
+  left: -0;
+   right: -0;
+   /* shadow offset */
+  padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-l:hover>.ext-m
+{
+   /* shadow offset */
+  right: -0;
+   left: 0;
+   /* shadow offset */
+  padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-l.ext-r:hover>.ext-m
+{
+   /* shadow offset */
+  right: -0;
+   left: -0;
+   /* shadow offset */
+  padding-left: 0;
+   padding-right: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-m:before, 
+.desktop ul.quaki-hmenu>li.ext:hover>.ext-off:before 
+{
+   position: absolute;
+   content: ' ';
+   top: -1px;
+   bottom: -1px;
+   /* shadow offset */
+  background-color: #F2F2F2;
+   border: 1px Dotted rgba(217, 217, 217, 0.9);
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-r:hover>.ext-m:before
+{
+   right: -1px;
+   left: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-l:hover>.ext-m:before
+{
+   left: -1px;
+   right: 0;
+}
+
+.desktop ul.quaki-hmenu>li.ext.ext-l.ext-r:hover>.ext-m:before
+{
+   left: -1px;
+   right: -1px
+;
+}
+
+.quaki-sheet
+{
+   background: #FFFFFF;
+   margin:50px auto 0;
+   position:relative;
+   cursor:auto;
+   width: 100%;
+   min-width: 700px;
+   max-width: 1920px;
+   z-index: auto !important;
+}
+
+.quaki-layout-wrapper
+{
+   position: relative;
+   margin: 0 auto 0 auto;
+   z-index: auto !important;
+}
+
+.quaki-content-layout
+{
+   display: table;
+   width: 100%;
+   table-layout: fixed;
+}
+
+.quaki-content-layout-row 
+{
+   display: table-row;
+}
+
+.quaki-layout-cell
+{
+   display: table-cell;
+   vertical-align: top;
+}
+
+/* need only for content layout in post content */ 
+.quaki-postcontent .quaki-content-layout
+{
+   border-collapse: collapse;
+}
+
+.quaki-vmenublock
+{
+   margin:3px;
+}
+div.quaki-vmenublock img
+{
+   margin: 0;
+}
+
+.quaki-vmenublockheader
+{
+   padding:10px 0;
+   margin:0 auto 7px;
+}
+.quaki-vmenublockheader .t,
+.quaki-vmenublockheader .t a,
+.quaki-vmenublockheader .t a:link,
+.quaki-vmenublockheader .t a:visited, 
+.quaki-vmenublockheader .t a:hover
+{
+   color: #FA6114;
+   font-size: 20px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   margin: 0 10px;
+}
+
+.quaki-vmenublockcontent
+{
+   margin:0 auto;
+}
+
+ul.quaki-vmenu, ul.quaki-vmenu ul
+{
+   list-style: none;
+   display: block;
+}
+
+ul.quaki-vmenu, ul.quaki-vmenu li
+{
+   display: block;
+   margin: 0;
+   padding: 0;
+   width: auto;
+   line-height: 0;
+}
+
+ul.quaki-vmenu
+{
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+ul.quaki-vmenu ul
+{
+   display: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+ul.quaki-vmenu ul.active
+{
+   display: block;
+}
+
+ul.quaki-vmenu>li>a
+{
+   padding:0 15px;
+   margin:0 auto;
+   color: #808080;
+   min-height: 30px;
+   line-height: 30px;
+}
+ul.quaki-vmenu a 
+{
+   display: block;
+   cursor: pointer;
+   z-index: 1;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   position:relative;
+}
+
+ul.quaki-vmenu li{
+   position:relative;
+}
+
+ul.quaki-vmenu>li
+{
+   margin-top: 0;
+}
+ul.quaki-vmenu>li>ul
+{
+   padding: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+ul.quaki-vmenu>li:first-child
+{
+   margin-top:0;
+}
+
+ul.quaki-vmenu>li>a:before
+{
+   content:url('images/vmenuitemicon.png');
+   margin-right:5px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera ul.quaki-vmenu>li>a:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+ul.quaki-vmenu>li>a.active:before
+{
+   content:url('images/vmenuactiveitemicon.png');
+   margin-right:5px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera ul.quaki-vmenu>li>a.active:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+ul.quaki-vmenu>li>a:hover:before,  ul.quaki-vmenu>li>a.active:hover:before,  ul.quaki-vmenu>li:hover>a:before,  ul.quaki-vmenu>li:hover>a.active:before
+{
+   content:url('images/vmenuhovereditemicon.png');
+   margin-right:5px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera ul.quaki-vmenu>li>a:hover:before, .opera   ul.quaki-vmenu>li>a.active:hover:before, .opera   ul.quaki-vmenu>li:hover>a:before, .opera   ul.quaki-vmenu>li:hover>a.active:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+ul.quaki-vmenu>li>a:hover, ul.quaki-vmenu>li>a.active:hover
+{
+   padding:0 15px;
+   margin:0 auto;
+}
+ul.quaki-vmenu>li>a:hover, ul.quaki-vmenu>li>a.active:hover
+{
+   text-decoration: none;
+}
+
+ul.quaki-vmenu a:hover, ul.quaki-vmenu a.active:hover 
+{
+   color: #FA5705;
+}
+
+ul.quaki-vmenu>li>a.active:hover>span.border-top, ul.quaki-vmenu>li>a.active:hover>span.border-bottom 
+{
+   background-color: transparent;
+}
+
+ul.quaki-vmenu>li>a.active
+{
+   padding:0 15px;
+   margin:0 auto;
+   text-decoration: none;
+   color: #FA5705;
+}
+
+ul.quaki-vmenu>li>ul:before
+{
+   margin:0 auto;
+   display: block;
+   position: absolute;
+   content: ' ';
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+}
+
+ul.quaki-vmenu li li a
+{
+   margin:0 auto;
+   position: relative;
+}
+ul.quaki-vmenu ul li
+{
+   margin: 0;
+   padding: 0;
+}
+ul.quaki-vmenu li li{
+   position: relative;
+   margin-top: 0;
+}
+
+ul.quaki-vmenu ul a
+{
+   display: block;
+   position: relative;
+   min-height: 22px;
+   overflow: visible;
+   padding: 0;
+   padding-left: 27px;
+   padding-right: 27px;
+   z-index: 0;
+   line-height: 22px;
+   color: #6C7F93;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   margin-left: 0;
+   margin-right: 0;
+}
+
+ul.quaki-vmenu ul a:visited, ul.quaki-vmenu ul a.active:hover, ul.quaki-vmenu ul a:hover, ul.quaki-vmenu ul a.active
+{
+   line-height: 22px;
+   color: #6C7F93;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   margin-left: 0;
+   margin-right: 0;
+}
+
+ul.quaki-vmenu ul ul a
+{
+   padding-left: 54px;
+}
+ul.quaki-vmenu ul ul ul a
+{
+   padding-left: 81px;
+}
+ul.quaki-vmenu ul ul ul ul a
+{
+   padding-left: 108px;
+}
+ul.quaki-vmenu ul ul ul ul ul a
+{
+   padding-left: 135px;
+}
+
+ul.quaki-vmenu ul>li>a:hover, ul.quaki-vmenu ul>li>a.active:hover
+{
+   margin:0 auto;
+}
+ul.quaki-vmenu ul li a:hover, ul.quaki-vmenu ul li a.active:hover
+{
+   text-decoration: none;
+   color: #FA5705;
+}
+
+ul.quaki-vmenu ul a:hover:after
+{
+   background-position: center ;
+}
+ul.quaki-vmenu ul a.active:hover:after
+{
+   background-position: center ;
+}
+ul.quaki-vmenu ul a.active:after
+{
+   background-position: bottom ;
+}
+
+ul.quaki-vmenu ul>li>a.active
+{
+   margin:0 auto;
+}
+ul.quaki-vmenu ul a.active, ul.quaki-vmenu ul a:hover, ul.quaki-vmenu ul a.active:hover
+{
+   text-decoration: none;
+   color: #FA5705;
+}
+
+.quaki-block
+{
+   margin:3px;
+}
+div.quaki-block img
+{
+   border: none;
+   margin: 0;
+}
+
+.quaki-blockheader
+{
+   padding:6px 5px;
+   margin:0 auto 2px;
+}
+.quaki-blockheader .t,
+.quaki-blockheader .t a,
+.quaki-blockheader .t a:link,
+.quaki-blockheader .t a:visited, 
+.quaki-blockheader .t a:hover
+{
+   color: #758799;
+   font-size: 20px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   margin: 0 5px;
+}
+
+.quaki-blockcontent
+{
+   padding:5px;
+   margin:0 auto;
+   color: #404040;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+.quaki-blockcontent table,
+.quaki-blockcontent li, 
+.quaki-blockcontent a,
+.quaki-blockcontent a:link,
+.quaki-blockcontent a:visited,
+.quaki-blockcontent a:hover
+{
+   color: #404040;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+
+.quaki-blockcontent p
+{
+   margin: 0 5px;
+}
+
+.quaki-blockcontent a, .quaki-blockcontent a:link
+{
+   color: #FB7C3C;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-blockcontent a:visited, .quaki-blockcontent a.visited
+{
+   color: #BABABA;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+
+.quaki-blockcontent a:hover, .quaki-blockcontent a.hover
+{
+   color: #FA5705;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+.quaki-block ul>li:before
+{
+   content:url('images/blockbullets.png');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   margin-left: -12px;
+}
+.opera .quaki-block ul>li:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.quaki-block li
+{
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+   color: #696969;
+   margin: 5px 0 0 10px;
+}
+
+.quaki-block ul>li, .quaki-block ol
+{
+   padding: 0;
+}
+
+.quaki-block ul>li
+{
+   padding-left: 12px;
+}
+
+.quaki-breadcrumbs
+{
+   margin:0 auto;
+}
+
+a.quaki-button,
+a.quaki-button:link,
+a:link.quaki-button:link,
+body a.quaki-button:link,
+a.quaki-button:visited,
+body a.quaki-button:visited,
+input.quaki-button,
+button.quaki-button
+{
+   text-decoration: none;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   position:relative;
+   display: inline-block;
+   vertical-align: middle;
+   white-space: nowrap;
+   text-align: center;
+   color: #FFFFFF;
+   margin: 0 5px 0 0 !important;
+   overflow: visible;
+   cursor: pointer;
+   text-indent: 0;
+   line-height: 24px;
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+}
+
+.quaki-button img
+{
+   margin: 0;
+   vertical-align: middle;
+}
+
+.firefox2 .quaki-button
+{
+   display: block;
+   float: left;
+}
+
+input, select, textarea, a.quaki-search-button span
+{
+   vertical-align: middle;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+.quaki-block select 
+{
+   width:96%;
+}
+
+input.quaki-button
+{
+   float: none !important;
+}
+
+.quaki-button.active, .quaki-button.active:hover
+{
+   background: #A1ADBA;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border-width: 0;
+   padding:0 21px;
+   margin:0 auto;
+}
+.quaki-button.active, .quaki-button.active:hover {
+   color: #FFFFFF !important;
+}
+
+.quaki-button.hover, .quaki-button:hover
+{
+   background: #8A99A8;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border-width: 0;
+   padding:0 21px;
+   margin:0 auto;
+}
+.quaki-button.hover, .quaki-button:hover {
+   color: #FFFFFF !important;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
+{
+   background: #FAFAFA;
+   -webkit-border-radius:4px;
+   -moz-border-radius:4px;
+   border-radius:4px;
+   border:1px solid #B9C2CB;
+   margin:0 auto;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
+{
+   width: 100%;
+   padding: 4px 0;
+   color: #525252 !important;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-shadow: none;
+}
+input.quaki-error, textarea.quaki-error
+{
+   background: #FAFAFA;
+   border:1px solid #E2341D;
+   margin:0 auto;
+}
+input.quaki-error, textarea.quaki-error {
+   color: #525252 !important;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+form.quaki-search input[type="text"]
+{
+   background: #FFFFFF;
+   -webkit-border-radius:4px;
+   -moz-border-radius:4px;
+   border-radius:4px;
+   border:1px solid #D6D6D6;
+   margin:0 auto;
+   width: 100%;
+   padding: 4px 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   color: #364049 !important;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+form.quaki-search 
+{
+   background-image: none;
+   border: 0;
+   display:block;
+   position:relative;
+   top:0;
+   padding:0;
+   margin:5px;
+   left:0;
+   line-height: 0;
+}
+
+form.quaki-search input, a.quaki-search-button
+{
+   top:0;
+   right:0;
+}
+
+form.quaki-search>input, a.quaki-search-button{
+   bottom:0;
+   left:0;
+   vertical-align: middle;
+}
+
+form.quaki-search input[type="submit"], input.quaki-search-button, a.quaki-search-button
+{
+   margin:0 auto;
+}
+form.quaki-search input[type="submit"], input.quaki-search-button, a.quaki-search-button {
+   position:absolute;
+   left:auto;
+   display:block;
+   border:none;
+   background:url('images/searchicon.png') center center no-repeat;
+   width:24px;
+   height: 100%;
+   padding:0;
+   color: #FFFFFF !important;
+   cursor: pointer;
+}
+
+a.quaki-search-button span.quaki-search-button-text {
+   display: none;
+}
+
+label.quaki-checkbox:before
+{
+   background: #FAFAFA;
+   -webkit-border-radius:1px;
+   -moz-border-radius:1px;
+   border-radius:1px;
+   border-width: 0;
+   margin:0 auto;
+   width:16px;
+   height:16px;
+}
+label.quaki-checkbox
+{
+   cursor: pointer;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 16px;
+   display: inline-block;
+   color: #364049 !important;
+}
+
+.quaki-checkbox>input[type="checkbox"]
+{
+   margin: 0 5px 0 0;
+}
+
+label.quaki-checkbox.active:before
+{
+   background: #FC905A;
+   -webkit-border-radius:1px;
+   -moz-border-radius:1px;
+   border-radius:1px;
+   border-width: 0;
+   margin:0 auto;
+   width:16px;
+   height:16px;
+   display: inline-block;
+}
+
+label.quaki-checkbox.hovered:before
+{
+   background: #D9DEE3;
+   -webkit-border-radius:1px;
+   -moz-border-radius:1px;
+   border-radius:1px;
+   border-width: 0;
+   margin:0 auto;
+   width:16px;
+   height:16px;
+   display: inline-block;
+}
+
+label.quaki-radiobutton:before
+{
+   background: #FAFAFA;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border-width: 0;
+   margin:0 auto;
+   width:12px;
+   height:12px;
+}
+label.quaki-radiobutton
+{
+   cursor: pointer;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 12px;
+   display: inline-block;
+   color: #364049 !important;
+}
+
+.quaki-radiobutton>input[type="radio"]
+{
+   vertical-align: baseline;
+   margin: 0 5px 0 0;
+}
+
+label.quaki-radiobutton.active:before
+{
+   background: #B9C2CB;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border-width: 0;
+   margin:0 auto;
+   width:12px;
+   height:12px;
+   display: inline-block;
+}
+
+label.quaki-radiobutton.hovered:before
+{
+   background: #D9DEE3;
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:3px;
+   border-width: 0;
+   margin:0 auto;
+   width:12px;
+   height:12px;
+   display: inline-block;
+}
+
+.quaki-comments
+{
+   border-top:1px dotted #A1ADBA;
+   margin:0 auto;
+   margin-top: 25px;
+}
+
+.quaki-comments h2
+{
+   color: #23292F;
+}
+
+.quaki-comment-inner
+{
+   -webkit-border-radius:2px;
+   -moz-border-radius:2px;
+   border-radius:2px;
+   padding:5px;
+   margin:0 auto;
+   margin-left: 96px;
+}
+.quaki-comment-avatar 
+{
+   float:left;
+   width:80px;
+   height:80px;
+   padding:2px;
+   background:#fff;
+   border:1px solid #E8E8E8;
+}
+
+.quaki-comment-avatar>img
+{
+   margin:0 !important;
+   border:none !important;
+}
+
+.quaki-comment-content
+{
+   padding:10px 0;
+   color: #404040;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-comment
+{
+   margin-top: 6px;
+}
+
+.quaki-comment:first-child
+{
+   margin-top: 0;
+}
+
+.quaki-comment-header
+{
+   color: #23292F;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 100%;
+}
+
+.quaki-comment-header a, 
+.quaki-comment-header a:link, 
+.quaki-comment-header a:visited,
+.quaki-comment-header a.visited,
+.quaki-comment-header a:hover,
+.quaki-comment-header a.hovered
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 100%;
+}
+
+.quaki-comment-header a, .quaki-comment-header a:link
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: bold;
+   font-style: normal;
+   color: #758799;
+}
+
+.quaki-comment-header a:visited, .quaki-comment-header a.visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #758799;
+}
+
+.quaki-comment-header a:hover,  .quaki-comment-header a.hovered
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #758799;
+}
+
+.quaki-comment-content a, 
+.quaki-comment-content a:link, 
+.quaki-comment-content a:visited,
+.quaki-comment-content a.visited,
+.quaki-comment-content a:hover,
+.quaki-comment-content a.hovered
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-comment-content a, .quaki-comment-content a:link
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #CD4704;
+}
+
+.quaki-comment-content a:visited, .quaki-comment-content a.visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #545454;
+}
+
+.quaki-comment-content a:hover,  .quaki-comment-content a.hovered
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #CD4704;
+}
+
+.quaki-pager
+{
+   -webkit-border-radius:4px;
+   -moz-border-radius:4px;
+   border-radius:4px;
+   padding:6px;
+   margin:2px;
+}
+
+.quaki-pager>*:last-child,
+.quaki-pager>*:last-child:hover
+{
+   margin-right:0;
+}
+
+.quaki-pager>span {
+   cursor:default;
+}
+
+.quaki-pager>*
+{
+   background: #D9DEE3;
+   -webkit-border-radius:4px;
+   -moz-border-radius:4px;
+   border-radius:4px;
+   padding:10px;
+   margin:0 4px 0 auto;
+   position:relative;
+   display:inline-block;
+   margin-left: 0;
+}
+
+.quaki-pager a:link,
+.quaki-pager a:visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #1C2126
+;
+}
+
+.quaki-pager .active
+{
+   background: #B6BFC9;
+   padding:10px;
+   margin:0 4px 0 auto;
+   color: #FFFFFF
+;
+}
+
+.quaki-pager .more
+{
+   background: #D9DEE3;
+   margin:0 4px 0 auto;
+}
+.quaki-pager a.more:link,
+.quaki-pager a.more:visited
+{
+   color: #411701
+;
+}
+.quaki-pager a:hover
+{
+   background: #B9C2CB;
+   padding:10px;
+   margin:0 4px 0 auto;
+}
+.quaki-pager  a:hover,
+.quaki-pager  a.more:hover
+{
+   text-decoration: none;
+   color: #21262C
+;
+}
+.quaki-pager>*:after
+{
+   margin:0 0 0 auto;
+   display:inline-block;
+   position:absolute;
+   content: ' ';
+   top:0;
+   width:0;
+   height:100%;
+   right: 0;
+   text-decoration:none;
+}
+
+.quaki-pager>*:last-child:after{
+   display:none;
+}
+
+.quaki-commentsform
+{
+   background: #E8E8E8;
+   background: transparent;
+   padding:10px;
+   margin:0 auto;
+   margin-top:25px;
+   color: #23292F;
+}
+
+.quaki-commentsform h2{
+   padding-bottom:10px;
+   margin: 0;
+   color: #23292F;
+}
+
+.quaki-commentsform label {
+   display: inline-block;
+   line-height: 25px;
+}
+
+.quaki-commentsform input:not([type=submit]), .quaki-commentsform textarea {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   width:100%;
+   max-width:100%;
+}
+
+.quaki-commentsform .form-submit
+{
+   margin-top: 10px;
+}
+.quaki-post
+{
+   padding:5px;
+}
+a img
+{
+   border: 0;
+}
+
+.quaki-article img, img.quaki-article, .quaki-block img, .quaki-footer img
+{
+   margin: 7px 7px 7px 7px;
+}
+
+.quaki-metadata-icons img
+{
+   border: none;
+   vertical-align: middle;
+   margin: 2px;
+}
+
+.quaki-article table, table.quaki-article
+{
+   border-collapse: collapse;
+   margin: 1px;
+}
+
+.quaki-post .quaki-content-layout-br
+{
+   height: 0;
+}
+
+.quaki-article th, .quaki-article td
+{
+   padding: 2px;
+   border: solid 1px #B9C2CB;
+   vertical-align: top;
+   text-align: left;
+}
+
+.quaki-article th
+{
+   text-align: center;
+   vertical-align: middle;
+   padding: 7px;
+}
+
+pre
+{
+   overflow: auto;
+   padding: 0.1em;
+}
+
+.preview-cms-logo
+{
+   border: 0;
+   margin: 1em 1em 0 0;
+   float: left;
+}
+
+.image-caption-wrapper
+{
+   padding: 7px 7px 7px 7px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.image-caption-wrapper img
+{
+   margin: 0 !important;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.image-caption-wrapper div.quaki-collage
+{
+   margin: 0 !important;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.image-caption-wrapper p
+{
+   font-size: 80%;
+   text-align: right;
+   margin: 0;
+}
+
+.quaki-postheader
+{
+   color: #696969;
+   margin: 5px 10px;
+   font-size: 24px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+.quaki-postheader a, 
+.quaki-postheader a:link, 
+.quaki-postheader a:visited,
+.quaki-postheader a.visited,
+.quaki-postheader a:hover,
+.quaki-postheader a.hovered
+{
+   font-size: 24px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+}
+
+.quaki-postheader a, .quaki-postheader a:link
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   text-align: left;
+   color: #FB7F41;
+}
+
+.quaki-postheader a:visited, .quaki-postheader a.visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   text-align: left;
+   color: #8C8C8C;
+}
+
+.quaki-postheader a:hover,  .quaki-postheader a.hovered
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   text-align: left;
+   color: #FB7C3C;
+}
+
+.quaki-postheadericons,
+.quaki-postheadericons a,
+.quaki-postheadericons a:link,
+.quaki-postheadericons a:visited,
+.quaki-postheadericons a:hover
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #696969;
+}
+
+.quaki-postheadericons
+{
+   padding: 1px;
+   margin: 0 0 0 10px;
+}
+
+.quaki-postheadericons a, .quaki-postheadericons a:link
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+   color: #FB722D;
+}
+
+.quaki-postheadericons a:visited, .quaki-postheadericons a.visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   color: #757575;
+}
+
+.quaki-postheadericons a:hover, .quaki-postheadericons a.hover
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+   color: #E65005;
+}
+
+.quaki-postdateicon:before
+{
+   content:url('images/postdateicon.png');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .quaki-postdateicon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.quaki-postauthoricon:before
+{
+   content:url('images/postauthoricon.png');
+   margin-right:6px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   bottom: auto;
+}
+.opera .quaki-postauthoricon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.quaki-postediticon:before
+{
+   content:url('images/postediticon.png');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera .quaki-postediticon:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.quaki-postcontent ul>li:before,  .quaki-post ul>li:before,  .quaki-textblock ul>li:before
+{
+   content:url('images/postbullets.png');
+   margin-right:10px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+}
+.opera .quaki-postcontent ul>li:before, .opera   .quaki-post ul>li:before, .opera   .quaki-textblock ul>li:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.quaki-postcontent li, .quaki-post li, .quaki-textblock li
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #404040;
+   margin: 3px 0 0 11px;
+}
+
+.quaki-postcontent ul>li, .quaki-post ul>li, .quaki-textblock ul>li, .quaki-postcontent ol, .quaki-post ol, .quaki-textblock ol
+{
+   padding: 0;
+}
+
+.quaki-postcontent ul>li, .quaki-post ul>li, .quaki-textblock ul>li
+{
+   padding-left: 17px;
+}
+
+.quaki-postcontent ul>li:before,  .quaki-post ul>li:before,  .quaki-textblock ul>li:before
+{
+   margin-left: -17px;
+}
+
+.quaki-postcontent ol, .quaki-post ol, .quaki-textblock ol, .quaki-postcontent ul, .quaki-post ul, .quaki-textblock ul
+{
+   margin: 1em 0 1em 11px;
+}
+
+.quaki-postcontent li ol, .quaki-post li ol, .quaki-textblock li ol, .quaki-postcontent li ul, .quaki-post li ul, .quaki-textblock li ul
+{
+   margin: 0.5em 0 0.5em 11px;
+}
+
+.quaki-postcontent li, .quaki-post li, .quaki-textblock li
+{
+   margin: 3px 0 0 0;
+}
+
+.quaki-postcontent ol>li, .quaki-post ol>li, .quaki-textblock ol>li
+{
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+
+.quaki-postcontent ul>li, .quaki-post ul>li, .quaki-textblock ul>li
+{
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+blockquote
+{
+   background: #F2F2F2 url('images/postquote.png') no-repeat scroll;
+   padding:10px 10px 10px 47px;
+   margin:10px 0 0 25px;
+   color: #121212;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: italic;
+   text-align: left;
+   /* makes block not to align behind the image if they are in the same line */
+  overflow: auto;
+   clear:both;
+}
+blockquote a, .quaki-postcontent blockquote a, .quaki-blockcontent blockquote a, .quaki-footer blockquote a,
+blockquote a:link, .quaki-postcontent blockquote a:link, .quaki-blockcontent blockquote a:link, .quaki-footer blockquote a:link,
+blockquote a:visited, .quaki-postcontent blockquote a:visited, .quaki-blockcontent blockquote a:visited, .quaki-footer blockquote a:visited,
+blockquote a:hover, .quaki-postcontent blockquote a:hover, .quaki-blockcontent blockquote a:hover, .quaki-footer blockquote a:hover
+{
+   color: #121212;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: italic;
+   text-align: left;
+}
+
+/* Override native 'p' margins*/
+blockquote p,
+.quaki-postcontent blockquote p,
+.quaki-blockcontent blockquote p,
+.quaki-footer blockquote p
+{
+   margin: 0;
+   margin: 5px 0;
+}
+
+.Sorter img
+{
+   border:0;
+   vertical-align:middle;
+   padding:0;
+   margin:0;
+   position:static;
+   z-index:1;
+   width: 12px;
+   height: 6px;
+}
+
+.Sorter a
+{
+   position:relative;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #647587;
+}
+
+.Sorter a:link
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #647587;
+}
+
+.Sorter a:visited, .Sorter a.visited
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #647587;
+}
+
+.Sorter a:hover, .Sorter a.hover
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #4C5967;
+}
+
+.Sorter
+{
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color:#364049;
+}
+
+.quaki-footer
+{
+   background: #5F7081;
+   border-top:1px dotted #7A7A7A;
+   margin:20px auto 0;   
+   color: #FFFFFF;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+   text-align: center;
+   padding: 0;
+   //-- Make footer stay at the bottom of the page
+   width:100%;
+   position : absolute;
+   bottom : 0;
+}
+
+.quaki-footer a,
+.quaki-footer a:link,
+.quaki-footer a:visited,
+.quaki-footer a:hover,
+.quaki-footer td, 
+.quaki-footer th,
+.quaki-footer caption
+{
+   color: #FFFFFF;
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   line-height: 175%;
+}
+
+.quaki-footer p 
+{
+   padding:0;
+   text-align: center;
+}
+
+.quaki-footer a,
+.quaki-footer a:link
+{
+   color: #DBDBDB;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+
+.quaki-footer a:visited
+{
+   color: #CCCCCC;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: none;
+}
+
+.quaki-footer a:hover
+{
+   color: #FED0B9;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   text-decoration: underline;
+}
+
+.quaki-footer h1
+{
+   color: #8A99A8;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-footer h2
+{
+   color: #A1ADBA;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-footer h3
+{
+   color: #FA681E;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-footer h4
+{
+   color: #7A7A7A;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-footer h5
+{
+   color: #7A7A7A;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-footer h6
+{
+   color: #7A7A7A;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.quaki-footer img
+{
+   border: none;
+   margin: 0;
+}
+
+.quaki-footer-inner
+{
+   margin: 0 auto;
+   min-width: 700px;
+   max-width: 1920px;
+   width:100%;
+   padding:25px;
+   padding-right: 25px;
+   padding-left: 25px;
+}
+
+.quaki-rss-tag-icon
+{
+   background:  url('images/footerrssicon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+}
+
+.quaki-rss-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.quaki-facebook-tag-icon
+{
+   background:  url('images/footerfacebookicon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+}
+
+.quaki-facebook-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.quaki-twitter-tag-icon
+{
+   background:  url('images/footertwittericon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+}
+
+.quaki-twitter-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.quaki-footer ul>li:before
+{
+   content:url('images/footerbullets.png');
+   margin-right:6px;
+   bottom: 2px;
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   font-size:0;
+   line-height:0;
+   margin-left: -13px;
+}
+.opera .quaki-footer ul>li:before
+{
+   /* Vertical-align:middle in Opera doesn't need additional offset */
+    bottom: 0;
+}
+
+.quaki-footer li
+{
+   font-size: 13px;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   color: #FEE1D2;
+}
+
+.quaki-footer ul>li, .quaki-footer ol
+{
+   padding: 0;
+}
+
+.quaki-footer ul>li
+{
+   padding-left: 13px;
+}
+
+.quaki-page-footer, 
+.quaki-page-footer a,
+.quaki-page-footer a:link,
+.quaki-page-footer a:visited,
+.quaki-page-footer a:hover
+{
+   font-family: Arial;
+   font-size: 10px;
+   letter-spacing: normal;
+   word-spacing: normal;
+   font-style: normal;
+   font-weight: normal;
+   text-decoration: underline;
+   color: #C7CFD6;
+}
+
+.quaki-page-footer
+{
+   position: relative;
+   z-index: auto !important;
+   padding: 1em;
+   text-align: center !important;
+   text-decoration: none;
+   color: #BFBFBF;
+}
+
+.quaki-lightbox-wrapper 
+{
+   background: #333;
+   background: rgba(0, 0, 0, .8);
+   bottom: 0;
+   left: 0;
+   padding: 0 100px;
+   position: fixed;
+   right: 0;
+   text-align: center;
+   top: 0;
+   z-index: 1000000;
+}
+
+.quaki-lightbox,
+.quaki-lightbox-wrapper .quaki-lightbox-image
+{
+   cursor: pointer;
+}
+
+.quaki-lightbox-wrapper .quaki-lightbox-image
+{
+   border: 6px solid #fff;
+   border-radius: 3px;
+   display: none;
+   max-width: 100%;
+   vertical-align: middle;
+}
+
+.quaki-lightbox-wrapper .quaki-lightbox-image.active
+{
+   display: inline-block;
+}
+
+.quaki-lightbox-wrapper .lightbox-error
+{
+   background: #fff;
+   border: 1px solid #b4b4b4;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px #333;
+   height: 80px;
+   opacity: .95;
+   padding: 20px;
+   position: fixed;
+   width: 300px;
+   z-index: 100;
+}
+
+.quaki-lightbox-wrapper .loading
+{
+   background: #fff url('images/preloader-01.gif') center center no-repeat;
+   border: 1px solid #b4b4b4;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px #333;
+   height: 32px;
+   opacity: .5;
+   padding: 10px;
+   position: fixed;
+   width: 32px;
+   z-index: 10100;
+}
+
+.quaki-lightbox-wrapper .arrow
+{
+   cursor: pointer;
+   height: 100px;
+   opacity: .5;
+   filter: alpha(opacity=50);
+   position: fixed;
+   width: 82px;
+   z-index: 10003;
+}
+
+.quaki-lightbox-wrapper .arrow.left
+{
+   left: 9px;
+}
+
+.quaki-lightbox-wrapper .arrow.right
+{
+   right: 9px;
+}
+
+.quaki-lightbox-wrapper .arrow:hover
+{
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.quaki-lightbox-wrapper .arrow.disabled 
+{
+   display: none;
+}
+
+.quaki-lightbox-wrapper .arrow-t, 
+.quaki-lightbox-wrapper .arrow-b
+{
+   background-color: #fff;
+   border-radius: 3px;
+   height: 6px;
+   left: 26px;
+   position: relative;
+   width: 30px;
+}
+
+.quaki-lightbox-wrapper .arrow-t
+{
+   top: 38px;
+}
+
+.quaki-lightbox-wrapper .arrow-b
+{
+   top: 50px;
+}
+
+.quaki-lightbox-wrapper .close
+{
+   cursor: pointer;
+   height: 22px;
+   opacity: .5;
+   filter: alpha(opacity=50);
+   position: fixed;
+   right: 39px;
+   top: 30px;
+   width: 22px;
+   z-index: 10003;
+}
+
+.quaki-lightbox-wrapper .close:hover 
+{
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.quaki-lightbox-wrapper .close .cw, 
+.quaki-lightbox-wrapper .close .ccw
+{
+   background-color: #fff;
+   border-radius: 3px;
+   height: 6px;
+   position: absolute;
+   left: -4px;
+   top: 8px;
+   width: 30px;
+}
+
+.quaki-lightbox-wrapper .cw
+{
+   transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   /* IE 9 */
+    -webkit-transform: rotate(45deg);
+   /* Safari and Chrome */
+    -o-transform: rotate(45deg);
+   /* Opera */
+    -moz-transform: rotate(45deg);
+/* Firefox */}
+
+.quaki-lightbox-wrapper .ccw
+{
+   transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+   /* Safari and Chrome */
+    -o-transform: rotate(-45deg);
+   /* Opera */
+    -moz-transform: rotate(-45deg);
+/* Firefox */}
+
+.quaki-lightbox-wrapper .close-alt, 
+.quaki-lightbox-wrapper .arrow-right-alt, 
+.quaki-lightbox-wrapper .arrow-left-alt 
+{
+   color: #fff;
+   display: none;
+   font-size: 2.5em;
+   line-height: 100%;
+}
+
+.ie8 .quaki-lightbox-wrapper .close-alt, 
+.ie8 .quaki-lightbox-wrapper .arrow-right-alt, 
+.ie8 .quaki-lightbox-wrapper .arrow-left-alt 
+{
+   display: block;
+}
+
+.ie8 .quaki-lightbox-wrapper .cw, 
+.ie8 .quaki-lightbox-wrapper .ccw 
+{
+   display: none;
+}
+
+.quaki-content-layout .quaki-sidebar1
+{
+   border-right:1px dotted #B5B5B5;
+   margin:0 auto;
+   width: 200px;
+}
+
+.quaki-content-layout .quaki-content
+{
+   margin:0 auto;
+}
+
+/* Begin Additional CSS Styles */
+
+/* End Additional CSS Styles */

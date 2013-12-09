@@ -25,6 +25,11 @@
 
 7) Resolve rubocop errors from adding the usgs controller with the index view
 
-8)Zurb Foundation Integration
+8) Zurb Foundation Integration
 
 * zerro rubocop errors
+
+9) Add custom header, quakismart logo, and footer
+
+* zerro rubocop errors
+* heroku integration
