@@ -8,6 +8,8 @@ gem 'rspec-rails'
 
 gem 'guard-rspec'
 
+gem 'foundation-rails'
+
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'

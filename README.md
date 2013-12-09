@@ -24,3 +24,5 @@
 6) Deploy to heroku is now working with default message
 
 7) Resolve rubocop errors from adding the usgs controller with the index view
+
+8)Zurb Foundation Integration
