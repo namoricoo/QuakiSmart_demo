@@ -42,7 +42,10 @@
 * deploy update to heroku
 
 11) Jquery integration
+* zerro rubocop errors
+* deploy update to heroku
 
+12) Jquery-ui integration
 * zerro rubocop errors
 * deploy update to heroku
 
