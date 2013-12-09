@@ -35,3 +35,9 @@
 * heroku integration
 * Link logo to home page
 * rename default heroku page to quakismart.heroku.com
+
+10) Add custom title to each page with modified function from Hartl tutorial
+
+* fixed 4 rubocop errors after adding custom title methods to application_helper.rb
+* deploy update to heroku
+

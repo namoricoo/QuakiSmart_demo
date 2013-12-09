@@ -17,3 +17,9 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+function hello_world () {
+  	$(document).ready(function(){	
+		alert("Hello from Jquery");
+	});
+}
