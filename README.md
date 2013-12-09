@@ -41,3 +41,9 @@
 * fixed 4 rubocop errors after adding custom title methods to application_helper.rb
 * deploy update to heroku
 
+11) Jquery integration
+
+* zerro rubocop errors
+* deploy update to heroku
+
+
