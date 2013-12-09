@@ -23,11 +23,13 @@
     	</nav>
     	
     	<div id="quaki-logo">
-    		<%= image_tag('logo_quakismart.png', :alt => "QuakiSmart Logo") %>
+    		<%= link_to image_tag('logo_quakismart.png', :alt => "QuakiSmart Logo"), "http://quakismart.herokuapp.com/" %>
     	</div>
     	
-    	<%= yield %>
-    
+    	<div class="quaki-sheet clearfix">    	
+    		<%= yield %>    	
+    	</div>	
+    	
     	<footer class="quaki-footer">
 	  		<div class="quaki-footer-inner">
 				<p><a href="#">Analytics</a> | <a href="#">About Us</a> | <a href="#">Github</a></p>

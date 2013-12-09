@@ -33,3 +33,5 @@
 
 * zerro rubocop errors
 * heroku integration
+* Link logo to home page
+* rename default heroku page to quakismart.heroku.com
