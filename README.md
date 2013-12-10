@@ -49,4 +49,8 @@
 * zerro rubocop errors
 * deploy update to heroku
 
+13) Add Favicon
+
+* deploy update to heroku
+
 
