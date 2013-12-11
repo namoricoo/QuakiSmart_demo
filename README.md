@@ -53,8 +53,10 @@
 
 * deploy update to heroku
 
-14) Add Analytics page, About us page
+14) Add Analytics page, About us page.
 
-15) Update favicon logo
+15) Update favicon logo.
+
+16)Connect Analytics and about us Links to their pages on both header and footer.
 
 
