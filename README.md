@@ -53,4 +53,8 @@
 
 * deploy update to heroku
 
+14) Add Analytics page, About us page
+
+15) Update favicon logo
+
 

@@ -3,6 +3,8 @@ QuakismartDemo::Application.routes.draw do
   get 'usgs/foundation'
   get 'usgs/jquery'
   get 'usgs/jqueryui'
+  get 'usgs/about'
+  get 'usgs/analytics'
   # The priority is based
   # upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
