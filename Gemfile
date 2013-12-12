@@ -10,6 +10,8 @@ gem 'guard-rspec'
 
 gem 'foundation-rails'
 
+gem 'geocoder'
+gem 'gmaps4rails'
 
 group :test do
   gem 'selenium-webdriver'
