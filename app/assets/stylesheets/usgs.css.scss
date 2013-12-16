@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; 
+  display:inline; 
+}
 
 div#quaki-logo {
    position: absolute;
@@ -1103,8 +1110,7 @@ ul.quaki-hmenu>li.ext>.ext-off
 .desktop ul.quaki-hmenu>li.ext.ext-l.ext-r:hover>.ext-m:before
 {
    left: -1px;
-   right: -1px
-;
+   right: -1px;
 }
 
 .quaki-sheet

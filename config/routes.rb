@@ -1,4 +1,6 @@
 QuakismartDemo::Application.routes.draw do
+  
+  
   root to: 'usgs#index'
   get 'usgs/foundation'
   get 'usgs/jquery'

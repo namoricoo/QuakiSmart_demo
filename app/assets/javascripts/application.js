@@ -15,6 +15,8 @@
 //= require foundation
 //= require turbolinks
 //= require jquery.ui.all
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
@@ -26,10 +28,32 @@ function hello_world() {
 }
 
 function jqueryui_test_dialog() {
-	$(document).ready(function(){
-		
-		$(function() {
+	$(document).ready(function(){		
+$(function() {
 			$( "#dialog" ).dialog();
 		});
 	});
 }
+
+function rails_google_map() {
+	$(document).ready(function(){	
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+		markers = handler.addMarkers([
+	    {
+	      "lat": 0,
+	      "lng": 0,
+	      "picture": {
+	        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+	        "width":  256,
+	        "height": 246
+	      },
+	      "infowindow": "hello!"
+	    }
+	  	]);
+	  	handler.bounds.extendWith(markers);
+	  	handler.fitMapToBounds();
+	});
+	});	
+}
+
