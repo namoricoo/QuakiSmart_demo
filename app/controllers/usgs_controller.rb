@@ -3,6 +3,9 @@ require_relative '../models/geo_json_helper.rb'
 # UsgsController
 class UsgsController < ApplicationController
   def index
+    # empty out the table for each new visit.
+    initialize_table
+    
     earthquake_class = EarthquakeClass.new
     @table_header =  earthquake_class.get_table_header
     
@@ -25,5 +28,9 @@ class UsgsController < ApplicationController
     seed_hash_array.each do | hash_array |  
       Earthquake.create(hash_array) 
     end
+  end
+
+  def initialize_table()
+     Earthquake.destroy_all
   end
 end

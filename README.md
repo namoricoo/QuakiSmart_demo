@@ -73,3 +73,5 @@
 * http://stackoverflow.com/questions/7845585/rake-assetsprecompile-doesnt-work-rails-3-1-1     
 
 20) dynamically add fields to database demo 1, using ActiveRecord extension.  
+
+21) initialize empty table for each new visit and page refresh
