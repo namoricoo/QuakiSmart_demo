@@ -8,7 +8,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require_relative '../lib/tasks/geo_json_helper.rb'
-
+require_relative '../lib/tasks/earthquake_class.rb'
 
 
 file_name = 'sample_earthquake.geojson'

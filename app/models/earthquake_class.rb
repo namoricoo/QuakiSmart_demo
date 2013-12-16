@@ -1,5 +1,5 @@
 # Earthquake class
-class EarthquakeClass
+class EarthquakeClass < ActiveRecord::Base
   attr_reader :earthquake_hash
   def initialize
     initialize_earthquake_hash
@@ -28,7 +28,16 @@ class EarthquakeClass
     title_hash
   end
 
-  
+  def get_table_header
+    table_header_hash = {}
+    table_header_hash['mag'] = 'Magnitude'
+    table_header_hash['place'] = 'Place'
+    table_header_hash['felt'] = 'Felt'
+    table_header_hash['tsunami'] = 'Tsunami'
+    table_header_hash['cdi'] = 'Intensity'
+    table_header_hash['dmin'] = 'Dimension'
+    table_header_hash
+  end
 
   def set_field(field_symbol, value)
     @earthquake_hash[field_symbol] = value

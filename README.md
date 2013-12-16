@@ -70,4 +70,6 @@
        
 * solution: don't compress the js file if it's not well code-formatted, by setting "config.assets.compress = false" in your config file, following @Mike's answer.
 
-* http://stackoverflow.com/questions/7845585/rake-assetsprecompile-doesnt-work-rails-3-1-1       
+* http://stackoverflow.com/questions/7845585/rake-assetsprecompile-doesnt-work-rails-3-1-1     
+
+20) dynamically add fields to database demo 1, using ActiveRecord extension.  
