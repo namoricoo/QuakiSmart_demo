@@ -52,11 +52,9 @@ class GeoJsonHhelper
 
   def set_earthquake_features(geo_features_hash)
     geo_features_hash.each_with_index do |value, index|
-      earthquake = EarthquakeClass.new
-       if (index == 2) || (index == 1)
-         set_earthquake_feature(value, earthquake)
-         @earthquake_array_of_hashes << earthquake.earthquake_hash
-       end
+      earthquake = EarthquakeClass.new       
+      set_earthquake_feature(value, earthquake)
+      @earthquake_array_of_hashes << earthquake.earthquake_hash       
     end
     @earthquake_array_of_hashes
   end
