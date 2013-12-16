@@ -39,18 +39,7 @@ function rails_google_map() {
 	$(document).ready(function(){	
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-		markers = handler.addMarkers([
-	    {
-	      "lat": 0,
-	      "lng": 0,
-	      "picture": {
-	        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-	        "width":  256,
-	        "height": 246
-	      },
-	      "infowindow": "hello!"
-	    }
-	  	]);
+		markers = handler.addMarkers(<%=raw @earthquake_hash.to_json %>);
 	  	handler.bounds.extendWith(markers);
 	  	handler.fitMapToBounds();
 	});

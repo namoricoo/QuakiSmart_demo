@@ -59,4 +59,4 @@
 
 16)Connect Analytics and about us Links to their pages on both header and footer.
 
-
+17)Add EarthquakeClass, geo_json_helper, and all files needed to process remote json and local Json files
