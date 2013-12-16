@@ -29,5 +29,6 @@ module QuakismartDemo
     # value = Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.load_path += value
     # config.i18n.default_locale = :de
+    config.assets.compress = false
   end
 end

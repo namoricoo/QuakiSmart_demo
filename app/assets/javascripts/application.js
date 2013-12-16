@@ -34,15 +34,3 @@ $(function() {
 		});
 	});
 }
-
-function rails_google_map() {
-	$(document).ready(function(){	
-	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-		markers = handler.addMarkers(<%=raw @earthquake_hash.to_json %>);
-	  	handler.bounds.extendWith(markers);
-	  	handler.fitMapToBounds();
-	});
-	});	
-}
-

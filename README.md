@@ -61,4 +61,13 @@
 
 17)Add EarthquakeClass, geo_json_helper, and all files needed to process remote json and local Json files
 
-18)load earthquake locations to map from database.
+18)demo json file, load all earthquake locations to map from database.
+
+19) Deploy update to heroku
+
+* error:  Unexpected token: operator (<) (line: 32568, col: 31, pos: 958556)
+       Error
+       
+* solution: don't compress the js file if it's not well code-formatted, by setting "config.assets.compress = false" in your config file, following @Mike's answer.
+
+* http://stackoverflow.com/questions/7845585/rake-assetsprecompile-doesnt-work-rails-3-1-1       
