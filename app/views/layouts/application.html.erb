@@ -18,8 +18,8 @@
 		<nav class="quaki-nav">
     		<div class="quaki-nav-inner">
     			<ul class="quaki-hmenu">
-    				<li><%= link_to("Analytics",{controller: "usgs", action: "analytics"})%></li>
-    				<li><%= link_to("About us",{controller: "usgs", action: "about"})%></li>
+    				<li><%= link_to("Analytics",{controller: "usgs", action: "analytics"}, {:class => set_nav_class(yield(:analytics_tab))})%></li>
+    				<li><%= link_to("About us",{controller: "usgs", action: "about"}, {:class => set_nav_class(yield(:about_us))})%></li>
     				<li><a href="#">Github</a></li>
     			</ul>
         	</div>
@@ -35,7 +35,7 @@
     	
     	<footer class="quaki-footer">
 	  		<div class="quaki-footer-inner">
-				<p><%= link_to("Analytics",{controller: "usgs", action: "analytics"})%> | <%= link_to("About us",{controller: "usgs", action: "about"})%> | <a href="#">Github</a></p>
+				<p><%= link_to("Analytics",{controller: "usgs", action: "analytics"}, {:class => set_nav_class(yield(:analytics_tab))})%> | <%= link_to("About us",{controller: "usgs", action: "about"})%> | <a href="#">Github</a></p>
 				<p>Copyright © 2013. Portland Code School. All Rights Reserved. Napoleon Kernessant, final Project</p>
 	  		</div>
 		</footer>

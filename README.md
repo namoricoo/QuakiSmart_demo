@@ -75,3 +75,7 @@
 20) dynamically add fields to database demo 1, using ActiveRecord extension.  
 
 21) initialize empty table for each new visit and page refresh
+
+22) Updated to OSX Maverick
+
+23)Dynamically highligh "Analytics" text and "About us" link when we are on one of those pages.

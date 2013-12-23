@@ -26,9 +26,7 @@ class EarthquakeClass
     title_hash['cdi'] = :cdi
     title_hash['dmin'] = :dmin
     title_hash
-  end
-
-  
+  end  
 
   def set_field(field_symbol, value)
     @earthquake_hash[field_symbol] = value

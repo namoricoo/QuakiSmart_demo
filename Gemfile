@@ -6,8 +6,6 @@ gem 'rails', '4.0.1'
 
 gem 'rspec-rails'
 
-gem 'guard-rspec'
-
 gem 'foundation-rails'
 
 gem 'geocoder'

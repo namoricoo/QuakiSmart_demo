@@ -20,15 +20,12 @@ module ApplicationHelper
     end
   end
 
-  def set_link_class(activity_status)
-    puts "------------------------#{activity_status} ------"
-    base_status = 'default'
-    active_status = 'active'
-    if activity_status == false
-      base_title
-    else
-      puts "------------------------ Active ------"
-      active_status
+  def set_nav_class(activity_status)    
+    base_status = 'default'    
+    if activity_status.empty?
+      base_status   
+    else      
+      activity_status
     end 
   end
 end
