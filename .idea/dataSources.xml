@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3189506009">
+    <data-source source="LOCAL" name="Rails quakismart_demo: development" uuid="8d30dd8c-587b-4735-8552-127e632a63e1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_heroku_db_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails quakismart_demo: test" uuid="abe8fa87-d449-4fbc-b464-08d604e00c1b">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_heroku_db_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails quakismart_demo: production" uuid="bd8ca877-80ca-4420-899d-3f75d9ab39af">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_heroku_db_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

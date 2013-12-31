@@ -4,7 +4,8 @@ ruby "2.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-gem 'rspec-rails'
+gem 'sass-rails', '~> 4.0.0'
+
 
 gem 'foundation-rails'
 
@@ -20,6 +21,7 @@ group :test do
   # Uncomment this line on OS X.
   gem 'growl'
   gem 'guard-rspec'
+  gem 'rspec-rails'
   #guard spec will automatically run the test for you
      
   # Uncomment these lines on Linux.
@@ -34,8 +36,7 @@ end
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+#
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
