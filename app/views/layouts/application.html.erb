@@ -8,9 +8,7 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   	<%= javascript_include_tag "underscore", "data-turbolinks-track" => true %>  	
-  	<%= javascript_include_tag "jquery" %>  	
-  	<%= javascript_include_tag "jquery-qtip-custom-js/jquery.qtip" %> 	  		
-  	<%= stylesheet_link_tag "jquery-qtip-custom-css/jquery.qtip.min" %>
+ 	<%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <!-- link_to "Profile", controller: "profiles", action: "show" -->
@@ -56,30 +54,9 @@
   	</script>
   	
   	<script>
-	jqueryui_test_dialog();	
-	$(function() {
-	  $('.datepicker').datepicker();
-	});
-	</script>
-	<script>
-		var $j = jQuery.noConflict();
-		// $j is now an alias to the jQuery function; creating the new alias is optional.
-		
-		// Grab all elements with the class "hasTooltip" located on index.html
-		$j(document).ready(function() {
-			$('.hasTooltip').each(function() { // Notice the .each() loop, discussed below
-			    $(this).qtip({
-			        content: {
-			            text: $(this).next('div') // Use the "div" element next to this for the content
-			        }
-			    });
-			});
-		});	
-		
-		$j(document).ready(function() {
-		    $j( ".hidden" ).hide();
-		});
-		
+	  $(function() {
+	    $( "#slider" ).slider();
+	  });
 	</script>
   </body>
 </html>
