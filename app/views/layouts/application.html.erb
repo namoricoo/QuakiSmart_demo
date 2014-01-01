@@ -61,16 +61,24 @@
 	  });
 	</script>
 	<script>
+		var $j = jQuery.noConflict();
+		// $j is now an alias to the jQuery function; creating the new alias is optional.
+		
 		// Grab all elements with the class "hasTooltip" located on index.html
-		$('.hasTooltip').each(function() { // Notice the .each() loop, discussed below
-		    $(this).qtip({
-		        content: {
-		            text: $(this).next('div') // Use the "div" element next to this for the content
-		        }
-		    });
+		$j(document).ready(function() {
+			$('.hasTooltip').each(function() { // Notice the .each() loop, discussed below
+			    $(this).qtip({
+			        content: {
+			            text: $(this).next('div') // Use the "div" element next to this for the content
+			        }
+			    });
+			});
+		});	
+		
+		$j(document).ready(function() {
+		    $j( ".hidden" ).hide();
 		});
 		
-		$( ".hidden" ).hide();
 	</script>	
   </body>
 </html>
