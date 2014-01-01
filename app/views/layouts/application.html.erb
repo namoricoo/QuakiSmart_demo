@@ -58,5 +58,18 @@
 	    $( "#slider" ).slider();
 	  });
 	</script>
+	<script>
+		// Grab all elements with the class "hasTooltip" located on index.html
+		$('.hasTooltip').each(function() { // Notice the .each() loop, discussed below
+		    $(this).qtip({
+		        content: {
+		            text: $(this).next('div') // Use the "div" element next to this for the content
+		        }
+		    });
+		});
+		
+		$( ".hidden" ).hide();
+	</script>>
+	
   </body>
 </html>
