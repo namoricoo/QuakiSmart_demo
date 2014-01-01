@@ -3,7 +3,8 @@ QuakismartDemo::Application.routes.draw do
   
   root to: 'usgs#index'
   get 'usgs/foundation'
-  get 'usgs/jquery'  
+  get 'usgs/jquery'
+  get 'usgs/jqueryui'
   get 'usgs/about'
   get 'usgs/analytics'
   # The priority is based
