@@ -11,6 +11,7 @@ gem 'foundation-rails'
 
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'will_paginate', '~> 3.0.5'
 
 group :test do
   gem 'selenium-webdriver'
