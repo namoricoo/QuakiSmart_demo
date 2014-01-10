@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem "activerecord", "~> 4.0.1"
 gem 'rails', '4.0.1'
 
 gem 'sass-rails', '~> 4.0.0'
@@ -11,6 +12,9 @@ gem 'foundation-rails'
 
 gem 'geocoder'
 gem 'gmaps4rails'
+
+
+# Not used yet...RailsCast 228
 gem 'will_paginate', '~> 3.0.5'
 
 group :test do
@@ -64,6 +68,7 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
 
 # Heroku integration has previously relied on using the Rails plugin system, which has been removed from Rails 4.
 # To enable features such as static asset serving and logging on Heroku please add rails_12factor gem to your Gemfile.
