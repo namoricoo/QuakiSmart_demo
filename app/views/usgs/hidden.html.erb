@@ -1,0 +1,140 @@
+<% provide(:title,'Home') %>
+
+<!-- <div class="row"> -->
+<div class="large-12 columns">
+ <div class="panel">
+ 	<div data-alert class="alert-box warning radius">
+	  This site is under construction
+	  <a href="#" class="close">&times;</a>
+	</div>
+ 	
+    <h3>Earthquake(s) <a href="#" data-reveal-id="myModal">with:</a></h3> 
+	
+   <div class="row">
+    	<div class="large-3 medium-3 columns">			
+			 <form>
+				  <div class="row">				    
+				      <label>Magnitude greater than</label>
+				      <select>				      	
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				        <option value="6">6</option>
+				        <option value="7">7</option>
+				        <option value="8">8</option>
+				        <option value="9">9</option>
+				        <option value="10">10</option>
+				      </select>				    
+				  </div>
+				  <div class="row">				    
+				      <label>Felt greater than</label>
+				       <select>				      	
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				        <option value="6">6</option>
+				        <option value="7">7</option>
+				        <option value="8">8</option>
+				        <option value="9">9</option>
+				        <option value="10">10</option>
+				      </select>				    
+				  </div>
+				  <div class="row">				   
+				      <label>Dimension greater than</label>
+				       <select>				      	
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				        <option value="6">6</option>
+				        <option value="7">7</option>
+				        <option value="8">8</option>
+				        <option value="9">9</option>
+				        <option value="10">10</option>
+				      </select>				    
+				  </div>
+				  <div class="row">				    
+				      <label>Cdi greater than</label>
+				       <select>				      	
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				        <option value="6">6</option>
+				        <option value="7">7</option>
+				        <option value="8">8</option>
+				        <option value="9">9</option>
+				        <option value="10">10</option>
+				      </select>				    
+				  </div>
+				  <div class="row">
+				      <label>Tsunami</label>
+				      <input id="tsunami" type="checkbox">				      
+				  </div>
+				   <div class="row">
+				   		<a href="#" class="small radius button">Reset</a>
+				   		&nbsp;
+				   		&nbsp;
+				   		&nbsp;
+				      	<a href="#" class="medium success button">Search</a><br/>
+				   </div>
+				</form>
+    			
+			    <div id="myModal" class="reveal-modal" data-reveal>
+				  <h2>Earthquake field descriptions</h2>				  
+				  <ol>
+					<li><h4>Magnitude:</h4>Decimal between -1.0 to 10.0 the magnitue for the event.</li>
+					<li><h4>Felt:</h4> between 44 to 843 the total number of felt reports submitted to the DYFI? system</li>
+					<li><h4>dmin:</h4> Decimal between 0.4 to 7.0 Horizontal distance from the epicenter to the nearest station (in degrees).</li>
+					<li><h4>Cdi:</h4> Decimal between 0.0 to 10.0  The maximum reported intensity for the event.</li>
+					<li><h4>Tsunami:</h4> checked for large events in oceanic regions and unchecked otherwise.</li>
+				  </ol>
+				  <a class="close-reveal-modal">&#215;</a>
+				</div>
+		</div>
+    	<div class="large-9 medium-9 columns">
+    		<!-- <p>Google Map</p> -->    
+    		<!-- markers = handler.addMarkers(<%=raw @hash.to_json %>);		
+  			 -->
+  			 <div style='width: 100%;'>
+  				<div id="map" style='width:100%; height: 400px;'></div>  				
+			</div>			
+    	</div>    	        
+	</div>
+ </div>
+</div>
+
+
+<!-- <div class="row"> -->
+<div class="large-12 columns">
+	<div class="panel">
+	<h3>Top 10 Earthquakes Table </h3>	
+	<div class="row">
+    	<div class="large-12 medium-12 columns">
+			<p>Table header, rows, and columns</p>
+			<TABLE>
+			   <TR>
+			   	<%  @table_header.each do |key, value| %>
+			      <TD><%= "#{value}" %></TD>
+			     <% end %>
+			   </TR>
+			    <% @table_body.each do |hash| %>
+				   	 <TR>
+				   	 <%  hash.each do |key, value| %>
+				      <TD><%= "#{value}" %></TD>
+				     <% end %>			      
+				   	 </TR>
+			    <% end %>
+			   	
+			</TABLE>
+		</div>    	   	        
+	</div>       
+	</div>
+</div>
+<!-- </div> -->
