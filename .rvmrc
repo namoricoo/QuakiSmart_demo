@@ -1,1 +1,1 @@
-rvm use ruby-2.0.0-p195@quakismart_demo --create
+rvm use ruby-2.1.0@quakismart_demo --create
